@@ -4,6 +4,7 @@ import ProductList from '../components/ProductList';
 import DataContext, { DataConsumer } from "../context/context"
 const Products = () => {
     const data1 = useContext(DataContext);
+    // console.log(data1);
     useEffect(()=>{
        
     },[])
