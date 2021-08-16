@@ -1,11 +1,16 @@
 import React, { useContext } from 'react'
-import CartContext from "../context/cartContext"
+import CartItem from '../components/CartItem';
+import {CartContext} from "../context/cartContext"
 const Cart = () => {
-    var cart = useContext(CartContext)
+    const { total, cart } = useContext(CartContext);
     return (
-        <>
-        {/* {console.log(cart)}; */}
-        </>
+        <section className="cart-items section">
+            <h2>your cart</h2>
+                {cart.map((item) => {
+                return <CartItem key={item.id} {...item} />;
+                })}
+            <h2>Total:₹{total}</h2>
+      </section>
     )
 }
 
