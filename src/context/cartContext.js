@@ -55,16 +55,16 @@ export default function CartProvider({children}){
     }
   };
   const addToCart = (item) => {
-    const { id, title, price } = item;
+    const { id, name, price } = item;
     const tempProduct1 = cart.find((item) => item.id === id);
     console.log("Ac");
     console.log(tempProduct1);
 
     if (tempProduct1) {
         console.log("Already hai");
-      increaseAmount(id);
+        increaseAmount(id);
     } else {
-      const tempItem = { id, title, price, amount: 1 };
+      const tempItem = { id, name, price, amount: 1 };
       console.log("Wdfert");
 
       console.log(tempItem);

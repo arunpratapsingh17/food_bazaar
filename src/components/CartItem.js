@@ -2,7 +2,7 @@ import React from 'react'
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 import { CartContext } from '../context/cartContext';
 
-const CartItem = ({id,title,price,amount}) => {
+const CartItem = ({id,name,price,amount}) => {
     const {
         removeitem,
         increaseAmount,
@@ -12,8 +12,8 @@ const CartItem = ({id,title,price,amount}) => {
     return (
         <article className="cart-item">
                 <div>
-                    <h4>{title}</h4>
-                    <h5>${price}</h5>
+                    <h4>{name}</h4>
+                    <h5>₹{price}</h5>
                     <button
                     className="cart-btn remove-btn"
                     onClick={() => {
@@ -23,26 +23,34 @@ const CartItem = ({id,title,price,amount}) => {
                     remove
                     </button>
                 </div>
-                <div>
-                    <button
-                    type="button"
-                    className="cart-btn amount-btn"
-                    onClick={() => {
-                        increaseAmount(id);
-                    }}
-                    >
-                    <FaAngleUp />
-                    </button>
-                    <p className="item-amount">{amount}</p>
-                    <button
+                <div className="amount-side">
+                    <div>
+                        <button
                         type="button"
                         className="cart-btn amount-btn"
+                        style={{color:"green"}}
                         onClick={() => {
-                            decreaseAmount(id, amount);
+                            increaseAmount(id);
                         }}
-                    >
-                    <FaAngleDown />
-                    </button>
+                        >
+                            <FaAngleUp />
+                        </button>
+                    </div>
+                    <div>
+                        <p className="item-amount"><span className="highlight">Amount-</span>{amount}</p>
+                    </div>
+                    <div>
+                        <button
+                            type="button"
+                            className="cart-btn amount-btn"
+                            style={{marginTop:"1rem",color:"red"}}
+                            onClick={() => {
+                                decreaseAmount(id, amount);
+                            }}
+                        >
+                            <FaAngleDown />
+                        </button>
+                    </div>
                 </div>
     </article>
     )
