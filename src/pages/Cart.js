@@ -1,13 +1,11 @@
 import React, { useContext } from 'react'
-import CartContext,{CartConsumer} from "../context/cartContext"
+import CartContext from "../context/cartContext"
 const Cart = () => {
     var cart = useContext(CartContext)
     return (
-        <CartConsumer>
-            {(cart)=>{
-                console.log(cart);
-            }}
-        </CartConsumer>
+        <>
+        {/* {console.log(cart)}; */}
+        </>
     )
 }
 

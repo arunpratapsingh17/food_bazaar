@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { DataProvider } from './context/context';
 import data from "./data/dataSet"
-import { CartProvider } from './context/cartContext';
+import  CartProvider  from './context/cartContext';
 
 ReactDOM.render(
   // <DataProvider value={data}>
@@ -14,7 +14,9 @@ ReactDOM.render(
   //   </CartProvider>
   // </DataProvider>,
   <React.StrictMode>
+    <CartProvider>
       <App />
+    </CartProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
