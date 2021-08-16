@@ -3,10 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { DataProvider } from './context/context';
+import data from "./data/dataSet"
+import { CartProvider } from './context/cartContext';
 
 ReactDOM.render(
+  // <DataProvider value={data}>
+  //   <CartProvider>
+  //     <App />
+  //   </CartProvider>
+  // </DataProvider>,
   <React.StrictMode>
-    <App />
+      <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
