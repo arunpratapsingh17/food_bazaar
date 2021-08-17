@@ -30,7 +30,9 @@
   text-align: center;
 }
 
-
+.header {
+  padding: 2rem 0;
+}
 .header ul {
   display: flex;
   justify-content: space-between;
@@ -328,4 +330,9 @@
 .highlight{
   color: var(--mainBlue);
   font-weight: bold;
+}
+.cat-select-outer{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
 }

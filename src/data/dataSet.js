@@ -12,7 +12,7 @@ export default [
     
     "vendor":"Himachal Pvt Ltd", 
     
-    "category":"Vegtables" 
+    "category":"Vegetables" 
     
     }, 
     
