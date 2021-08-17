@@ -31,7 +31,7 @@ const ProductList = ({data}) => {
       [name]: event.target.value,
     });
   };
-  console.log(state);
+  // console.log(state);
   useEffect(()=>{
     if(state.Category ===""){
       console.log("Hurray");
@@ -39,19 +39,18 @@ const ProductList = ({data}) => {
     else if(state.Category == "Vegetables"){
       console.log("Veggie changed");
       data = data.filter((item)=>item.category=="Vegetables");
-      // setData1(data);
+      setData1(data);
       // console.log("Neen");
       // console.log(data);
       // setData1(data);
       // console.log(data1);
     }
     else if(state.Category == "Fruits"){
-      console.log("Veggie changed");
       data = data.filter((item)=>item.category=="Fruits");
+      setData1(data);
     }
   },[state])
   var {total} = useContext(CartContext);
-    console.log(data);
     return (
         <section className="section">
         <h2 className="section-title">Our Products</h2>
@@ -73,7 +72,7 @@ const ProductList = ({data}) => {
             </Select>
           </FormControl>
         </div>
-        <div className="products-center">
+        <div className="products-center" className="all-products">
           {data1.map((item) => {
             return <Product key={item.id} {...item} />;
           })}

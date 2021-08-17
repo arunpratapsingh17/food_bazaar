@@ -336,3 +336,7 @@
   justify-content: center;
   margin-bottom: 5rem;
 }
+.all-products{
+  display: flex;
+  justify-content: space-evenly;
+}
