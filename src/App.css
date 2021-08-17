@@ -338,5 +338,11 @@
 }
 .all-products{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+@media screen and (width: 320px) {
+  .all-products{
+    width: 40%;
+  }
 }
